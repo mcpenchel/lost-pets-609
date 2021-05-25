@@ -1,0 +1,7 @@
+<h3><%= @pet.name %></h3>
+<h2>I was found at this location: <%= @pet.location %> <br> <%= @pet.pretty_found_at %></h2>
+<p>Help me! I'm a <%= @pet.species %>.</p>
+
+<%= link_to "Update information", edit_pet_path(@pet) %>
+<%= link_to "Eat this pet", pet_path(@pet), method: :delete, data: { confirm: "Are you sure it looks tasty?" } %>
+<%= link_to "Back to all pets", pets_path %>
